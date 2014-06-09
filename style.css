@@ -40,13 +40,54 @@ body{
 }
 
 
-/*.floatingIcon
+.floatingIcon
 {
-	width: 100px;
-	height: 100px;
-	background-color: red;
-	position: fixed;
-	left: 800px;
-	bottom: 500px;
+	position:fixed;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: 50% 50%;
 }
-*/
+
+.floatingChair{
+	width: 100px;
+	height: 150px;
+	background-image: url(images/animations/teamphoria-logo.png);
+	left: 35%;
+	top: 25%;
+}
+
+.arrowLogo{
+	width:80px;
+	height:80px;
+	background-image: url(images/animations/5twenty-logo-02.png);
+	left: 70%;
+	top: 35%;
+}
+
+.skullLogo{
+	background-image: url(images/animations/hackathon4-icon-02.png);
+	width:80px;
+	height:80px;
+	left:48%;
+	top:35%;
+}
+
+.preLogo{
+	background-image: url(images/animations/prepado-logo.png);
+	width:100px;
+	height:100px;
+	left:60%;
+	top:28%;
+}
+
+
+.sparcLogo{
+	background-image: url(images/animations/sparc-u.png);
+	width:90px;
+	height:90px;
+	left:24%;
+	top:35%;
+}
+
+
+

@@ -49,7 +49,7 @@ body{
 
 
 
-
+/*
 @-webkit-keyframes float-lr {
 	0%, 40%, 80% { left: 35%; }
 	20%, 60%, 100% { left: 32%;}
@@ -67,38 +67,30 @@ body{
 	20%, 60%, 100% { left: 100px;}
 }
 
-
+*/
 
 @-webkit-keyframes float-up {
 	0% {top: 50%;}
-	96% { top:-50px}
-	98% { top:-100px;}
-	100% { top:-300px;}
+	100% { top:-300px;}	
 }
 @-moz-keyframes float-up {
 	0% {top: 50%;}
-	96% { top:-50px}
-	98% { top:-100px;}
-	100% { top:-300px;}
+	100% { top:-300px;}	
 }
 @-o-keyframes float-up {
 	0% {top: 50%;}
-	96% { top:-50px}
-	98% { top:-100px;}
-	100% { top:-300px;}
+	100% { top:-300px;}	
 }
 @keyframes float-up {
 	0% {top: 50%;}
-	96% { top:-50px}
-	98% { top:-100px;}
-	100% { top:-300px;}
+	100% { top:-300px;}	
 }
 
 
 
 @-webkit-keyframes wobble {
-	0%, 40%, 80% { -webkit-transform: rotate(4deg);}
-	20%, 60% { -webkit-transform: rotate(-4deg);}
+	0%, 40%, 80% { -webkit-transform: rotate(8deg);}
+	20%, 60% { -webkit-transform: rotate(-8deg);}
 	100% { }
 }
 @-moz-keyframes wobble {

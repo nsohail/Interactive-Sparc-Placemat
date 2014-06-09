@@ -54,22 +54,28 @@
 
     var animateNextElement = function()
     {
-        
-   
          var $element = elementsThatFloat[currentElement];
          $element.addClass('animateFloat')
          
          var randomLeft = getRandomInt(30,75) + '%';
          $element.css({'left':randomLeft});
-         console.log ($element);
-         currentElement = (currentElement == elementsThatFloat.length-1) ?  0 : currentElement+1;
+         
+         //console.log ($element);
+
+         if(currentElement===elementsThatFloat.length-1){
+            currentElement=0;
+         }
+         else{
+            currentElement=currentElement+1;
+         }
+        
+         //currentElement = (currentElement == elementsThatFloat.length-1) ?  0 : currentElement+1;
 
          
          window.setTimeout(function(){
             $element.removeClass('animateFloat');
-
             animateNextElement();
-         }, 11*1000);
+         }, 9*1000); //do this every 11 milliseconds
     }
 
 

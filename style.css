@@ -40,44 +40,123 @@ body{
 }
 
 
-.floatingIcon
-{
+.floatingIcon{
 	position:fixed;
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: 50% 50%;
 }
 
+
+
+
+@-webkit-keyframes float-lr {
+	0%, 40%, 80% { left: 35%; }
+	20%, 60%, 100% { left: 32%;}
+}
+@-moz-keyframes float-lr {
+	0%, 40%, 80% { left: -100px; }
+	20%, 60%, 100% { left: 100px;}
+}
+@-o-keyframes float-lr {
+	0%, 40%, 80% { left: -100px; }
+	20%, 60%, 100% { left: 100px;}
+}
+@keyframes float-lr {
+	0%, 40%, 80% { left: -100px; }
+	20%, 60%, 100% { left: 100px;}
+}
+
+
+
+@-webkit-keyframes float-up {
+	0% {top: 50%;}
+	96% { top:-50px}
+	98% { top:-100px;}
+	100% { top:-300px;}
+}
+@-moz-keyframes float-up {
+	0% {top: 50%;}
+	96% { top:-50px}
+	98% { top:-100px;}
+	100% { top:-300px;}
+}
+@-o-keyframes float-up {
+	0% {top: 50%;}
+	96% { top:-50px}
+	98% { top:-100px;}
+	100% { top:-300px;}
+}
+@keyframes float-up {
+	0% {top: 50%;}
+	96% { top:-50px}
+	98% { top:-100px;}
+	100% { top:-300px;}
+}
+
+
+
+@-webkit-keyframes wobble {
+	0%, 40%, 80% { -webkit-transform: rotate(4deg);}
+	20%, 60% { -webkit-transform: rotate(-4deg);}
+	100% { }
+}
+@-moz-keyframes wobble {
+	0%, 40%, 80% { -moz-transform: rotate(4deg);}
+	20%, 60% { -moz-transform: rotate(-4deg);}
+	100% { }
+}
+@-o-keyframes wobble {
+	0%, 40%, 80% { transform: rotate(4deg);}
+	20%, 60% { transform: rotate(-4deg);}
+	100% { }
+}
+@keyframes wobble {
+	0%, 40%, 80% { transform: rotate(4deg);}
+	20%, 60% { transform: rotate(-4deg);}
+	100% { }
+}
+
+
+
+
+.animateFloat
+{
+		-webkit-animation: float-up 10s ease-in-out forwards, float-lr 10s ease-in-out forwards, wobble 10s ease-in-out forwards;
+
+}
+
+
 .floatingChair{
 	width: 100px;
 	height: 150px;
 	background-image: url(images/animations/teamphoria-logo.png);
-	left: 35%;
-	top: 25%;
+
+
 }
 
 .arrowLogo{
 	width:80px;
 	height:80px;
 	background-image: url(images/animations/5twenty-logo-02.png);
-	left: 70%;
-	top: 35%;
+
+
 }
 
 .skullLogo{
 	background-image: url(images/animations/hackathon4-icon-02.png);
 	width:80px;
 	height:80px;
-	left:48%;
-	top:35%;
+
+	
 }
 
 .preLogo{
 	background-image: url(images/animations/prepado-logo.png);
 	width:100px;
 	height:100px;
-	left:60%;
-	top:28%;
+
+	
 }
 
 
@@ -86,7 +165,11 @@ body{
 	width:90px;
 	height:90px;
 	left:24%;
-	top:35%;
+	
+}
+.startBottom
+{
+	bottom:350px;
 }
 
 

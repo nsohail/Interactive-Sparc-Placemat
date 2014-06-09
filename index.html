@@ -15,11 +15,11 @@
     <div class="container-fluid">
         <div id="top">
         </div>
-        <div class="floatingIcon floatingChair"></div>
-        <div class="floatingIcon arrowLogo"></div>
-        <div class="floatingIcon skullLogo"></div>
-        <div class="floatingIcon preLogo"></div>
-        <div class="floatingIcon sparcLogo"></div>
+        <div class="floatingIcon floatingChair startBottom"></div>
+        <div class="floatingIcon arrowLogo startBottom"></div>
+        <div class="floatingIcon skullLogo startBottom"></div>
+        <div class="floatingIcon preLogo startBottom"></div>
+        <div class="floatingIcon sparcLogo startBottom"></div>
 
 
 
@@ -32,6 +32,49 @@
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+
+    function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+
+
+    var elementsThatFloat = [
+        $(".floatingChair"),
+        $(".arrowLogo"),
+        $(".skullLogo"),
+        $(".preLogo"),
+        $(".sparcLogo")
+    ];
+
+    var currentElement = 0;
+
+    var animateNextElement = function()
+    {
+        
+   
+         var $element = elementsThatFloat[currentElement];
+         $element.addClass('animateFloat')
+         
+         var randomLeft = getRandomInt(30,75) + '%';
+         $element.css({'left':randomLeft});
+         console.log ($element);
+         currentElement = (currentElement == elementsThatFloat.length-1) ?  0 : currentElement+1;
+
+         
+         window.setTimeout(function(){
+            $element.removeClass('animateFloat');
+
+            animateNextElement();
+         }, 11*1000);
+    }
+
+
+    animateNextElement();
+
+    </script>
   </body>
 </html> 

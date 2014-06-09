@@ -7,7 +7,6 @@ body{
 	max-height: 1080px;
 	background-image: url(images/SPARC_placemat_scene_v1-sky.jpg);
 	background-size:cover;
-	
 	height:100%;
 	width:100%;
 }
@@ -29,6 +28,7 @@ body{
 	/*background-color: blue;*/
 	position: absolute;
 	bottom:0;
+	left:0;
 	z-index: 1000;
 }
 

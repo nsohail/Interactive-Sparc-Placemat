@@ -7,9 +7,25 @@
     <title>Sparc Placemat</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
      <link href="style.css" rel="stylesheet">
+<style>
+@-webkit-keyframes float-lr {
 
+}
+@-moz-keyframes float-lr {
+
+}
+@-o-keyframes float-lr {
+
+}
+@keyframes float-lr {
+
+}
+
+
+
+</style>
  </head>
   <body>
     <div class="container-fluid">
@@ -35,11 +51,55 @@
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
     <script type="text/javascript">
-
+		
+		
+		
+		
     function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
+	 function findKeyframesRule(rule)
+    {
+        var ss = document.styleSheets;
+        for (var i = 2; i < ss.length; i++) {
+            for (var j = 0; j < ss[i].cssRules.length; ++j) {
+                if (ss[i].cssRules[j].type == window.CSSRule.WEBKIT_KEYFRAMES_RULE && ss[i].cssRules[j].name == rule)
+                    return ss[i].cssRules[j];
+            }
+        }
+        
+        return null;
+    }
+    
+    function change()
+    {
+	      var keyframes = findKeyframesRule("float-lr");
+	      console.log (keyframes);
+	       keyframes.deleteRule("0%");
+	       keyframes.deleteRule("20%");
+		   keyframes.deleteRule("40%");
+		   keyframes.deleteRule("60%");
+		   keyframes.deleteRule("80%");
+		   keyframes.deleteRule("100%");
+		   
+		var randomLeft = getRandomInt(0,75);   
+		  var randomLeftStart = randomLeft - 3;
+		  var randomLeftEnd = randomLeft + 3;
+		  
+		keyframes.insertRule("0% { left: "+randomLeftStart+"%; }");
+        keyframes.insertRule("40% { left: "+randomLeftStart+"%; }");
+        keyframes.insertRule("80% { left: "+randomLeftStart+"%; }");
+
+		keyframes.insertRule("20% { left: "+randomLeftEnd+"%; }");
+        keyframes.insertRule("60% { left: "+randomLeftEnd+"%; }");
+        keyframes.insertRule("100% { left: "+randomLeftEnd+"%; }"); 
+
+
+        
+		   
+	      
+    }
 
 
     var elementsThatFloat = [
@@ -55,13 +115,13 @@
     var animateNextElement = function()
     {
         
-   
+		 change();
          var $element = elementsThatFloat[currentElement];
          $element.addClass('animateFloat')
          
          var randomLeft = getRandomInt(30,75) + '%';
          $element.css({'left':randomLeft});
-         console.log ($element);
+         
          currentElement = (currentElement == elementsThatFloat.length-1) ?  0 : currentElement+1;
 
          
@@ -71,10 +131,11 @@
             animateNextElement();
          }, 11*1000);
     }
-
-
+$('document').ready(function(){
+	console.log ('ready');
     animateNextElement();
 
+});
     </script>
   </body>
 </html> 

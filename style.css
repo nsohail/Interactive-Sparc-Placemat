@@ -1,10 +1,10 @@
 body{
 	margin: 0;
+	max-width: 2560px;
+	max-height: 1080px;
 }
 .container-fluid{
 	position: absolute;
-	max-width: 2560px;
-	max-height: 1080px;
 	background-image: url(images/SPARC_placemat_scene_v1-sky.jpg);
 	background-size:cover;
 	height:100%;

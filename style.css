@@ -13,17 +13,17 @@ body{
 }
 
 
-
 #top{
 	width:100%;
 	height:100%;
-	position:absolute;
 	background-image: url(images/content-placement.png);
-	background-repeat:no-repeat;
-	background-size:contain;
-	background-position: 50% 50%;
-	top:0;
+	position:absolute;
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+	background-size: contain;
 }
+
+
 
 
 #bottom{
@@ -52,6 +52,8 @@ body{
 	background-size: contain;
 	background-position: 50% 50%;
 }
+
+
 
 
 

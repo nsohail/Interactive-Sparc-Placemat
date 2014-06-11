@@ -2,9 +2,10 @@ body{
 	margin: 0;
 	max-width: 2560px;
 	max-height: 1080px;
+	position:Relative;
 }
 .container-fluid{
-	position: relative;
+	position: absolute;
 	background-image: url(images/SPARC_placemat_scene_v1-sky.jpg);
 	background-size:cover;
 	height:100%;
@@ -12,7 +13,14 @@ body{
 	z-index: -5;
 }
 
+#wrap{
 
+	min-height: 590px;
+}
+
+
+
+/*
 #top{
 	width:100%;
 	height:100%;
@@ -22,8 +30,55 @@ body{
 	background-repeat: no-repeat;
 	background-size: contain;
 }
+*/
+
+#left{
+	background-image: url(images/left-panel.png);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-position: 0% 0;
+	background-size: contain;
+	background-repeat: no-repeat;
+	z-index:10;
+	left:0;
+}
+
+#right{
+	background-image: url(images/right-panel.png);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	right:0;
+	background-position:100% 0px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	z-index: 10;
+}
 
 
+#maga{
+	background-image: url(images/maga-logo.png);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	right:0;
+	background-position:100% -4px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	z-index: 10;
+}
+
+
+#logo{
+	background-image: url(images/logo.png),url(images/top-back.png);
+	height: 20%;
+	background-position: 50% 0, 50% 0;
+	width: 100%;
+	background-size: contain;
+	background-repeat: no-repeat, repeat-x;
+	position: absolute;
+}
 
 
 #bottom{
@@ -52,9 +107,6 @@ body{
 	background-size: contain;
 	background-position: 50% 50%;
 }
-
-
-
 
 
 

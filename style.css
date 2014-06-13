@@ -2,7 +2,7 @@ body{
 	margin: 0;
 	max-width: 2560px;
 	max-height: 1080px;
-	position:Relative;
+
 }
 .container-fluid{
 	position: absolute;
@@ -13,11 +13,10 @@ body{
 	z-index: -5;
 }
 
-#wrap{
 
-	min-height: 590px;
+.wrap{
+	min-width:920px;
 }
-
 
 
 /*
@@ -78,6 +77,9 @@ body{
 	background-size: contain;
 	background-repeat: no-repeat, repeat-x;
 	position: absolute;
+	left:0;
+	right:0;
+	z-index:8;
 }
 
 
@@ -89,7 +91,7 @@ body{
 	position: absolute;
 	bottom:0;
 	left:0;
-	z-index: 1000;
+	z-index: 1;
 }
 
 #bottom-image{

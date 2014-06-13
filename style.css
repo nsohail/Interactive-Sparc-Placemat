@@ -104,20 +104,20 @@ body{
 
 
 @-webkit-keyframes float-up {
-	0% {top: 50%;}
-	100% { top:-300px;}
+	0% {bottom: 30%;}
+	100% { bottom:100%;}
 }
 @-moz-keyframes float-up {
-	0% {top: 50%;}
-	100% { top:-300px;}
+	0% {bottom: 30%;}
+	100% {bottom:100%;}
 }
 @-o-keyframes float-up {
-	0% {top: 50%;}
-	100% { top:-300px;}
+	0% {bottom: 30%;}
+	100% { bottom:100%;}
 }
 @keyframes float-up {
-	0% {top: 50%;}
-	100% { top:-300px;}
+	0% {bottom: 30%;}
+	100% { bottom:100%;}
 }
 
 
@@ -144,37 +144,15 @@ body{
 }
 
 
-@-webkit-keyframes float-lr {
-	0%, 40%, 80% { left: 35%; }
-	20%, 60%, 100% { left: 32%;}
-}
 
-
-@-moz-keyframes float-lr {
-	0%, 40%, 80% { left: 35%; }
-	20%, 60%, 100% { left: 32%;}
-}
-
-@-o-keyframes float-lr {
-	0%, 40%, 80% { left: 35%; }
-	20%, 60%, 100% { left: 32%;}
-}
-
-@keyframes float-lr {
-	0%, 40%, 80% { left: 35%; }
-	20%, 60%, 100% { left: 32%;}
-}
 
 
 .animateFloat{
-		-webkit-animation: float-up 10s ease-in-out forwards, wobble 10s ease-in-out forwards;
+		-webkit-animation: float-up 20s ease-in-out forwards, wobble 20s ease-in-out forwards, float-lr 20s ease-in-out forwards;
 }
 
 
-/*.animateRock{
-		-webkit-animation: float-lr 10s ease-in-out forwards;
 
-}*/
 
 
 .floatingChair{
@@ -220,7 +198,7 @@ body{
 
 .startBottom
 {
-	top:90%;
+	bottom:1%;
 }
 
 

@@ -8,8 +8,27 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-     <link href="style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css">
 
+    <style>
+
+    @-webkit-keyframes float-lr {
+
+    }
+
+    @-moz-keyframes float-lr {
+
+    }
+
+    @-o-keyframes float-lr {
+ 
+    }
+
+    @keyframes float-lr {
+
+    }
+
+    </style>
 
 
 </head>
@@ -51,7 +70,9 @@
 
 
 
-    /*
+
+
+    
 	 function findKeyframesRule(rule){
         var ss = document.styleSheets;
         for (var i = 2; i < ss.length; i++) {
@@ -66,9 +87,9 @@
     
 
 
-    function change(){
+    function changeRuleLr(){
 	    var keyframes = findKeyframesRule("float-lr");
-	    console.log (keyframes);
+
 	    keyframes.deleteRule("0%");
 	    keyframes.deleteRule("20%");
 		keyframes.deleteRule("40%");
@@ -76,7 +97,7 @@
 		keyframes.deleteRule("80%");
 		keyframes.deleteRule("100%");
 		   
-		var randomLeft = getRandomInt(0,75);   
+		var randomLeft = getRandomInt(45,65);   
 		var randomLeftStart = randomLeft - 3;
 		var randomLeftEnd = randomLeft + 3;
 		  
@@ -86,9 +107,8 @@
 
 		keyframes.insertRule("20% { left: "+randomLeftEnd+"%; }");
         keyframes.insertRule("60% { left: "+randomLeftEnd+"%; }");
-        keyframes.insertRule("100% { left: "+randomLeftEnd+"%; }");    
+        keyframes.insertRule("100% { left: "+randomLeftEnd+"%; }");
     }
-    */
 
 
 
@@ -106,40 +126,37 @@
 
     var animateNextElement = function(){
         
-		 //change();
+		 changeRuleLr();
 
          var $element = elementsThatFloat[currentElement];
          $element.addClass('animateFloat');
 
          
-         var randomLeft = getRandomInt(30,75) + '%';
+         var randomLeft = getRandomInt(45,65) + '%';
          $element.css({'left':randomLeft});
          
          //currentElement = (currentElement == elementsThatFloat.length-1) ?  0 : currentElement+1;
          
          if(currentElement == elementsThatFloat.length-1){
-            currentElement=0;
+            currentElement = 0;
          }
 
          else{
-            currentElement= currentElement+1;
+            currentElement = currentElement + 1;
          }
-
-         
 
 
          window.setTimeout(function(){
             $element.removeClass('animateFloat');
 
             animateNextElement();
-         }, 7*1000); //do this every 7 milliseconds 
+         }, 20*1000); //do this every  milliseconds 
 
 
     }
 
 
     $('document').ready(function(){
-    	console.log ('ready');
         animateNextElement();
 
     });

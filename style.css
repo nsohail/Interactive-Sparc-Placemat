@@ -65,8 +65,8 @@ body{
 #logo{
 	background-image: url(images/logo-2.png);
 	height: 40%;
-	background-position: 50% 0, 50% 0;
-	width: 40%;
+	background-position: 50% 0;
+	width: 35%;
 	background-size: contain;
 	background-repeat: no-repeat, repeat-x;
 	position: absolute;
